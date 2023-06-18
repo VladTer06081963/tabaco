@@ -8,9 +8,18 @@
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/app.js" defer></script>
     <script src="libs/rain.js" defer></script>
+
+    </script>
   </head>
   <body>
-    <div class="logo" style="background-image: url(img/logo.svg)"></div>
+    <!-- <div class="logo" style="background-image: url(img/logo.svg)"></div> -->
+		<audio id="bg-music" loop hidden>
+			<source src="/music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+	</audio>
+	
+	<button id="audio-control">Play Music</button>
+	
 
     <section class="layers">
       <div class="layers__container">
@@ -27,12 +36,17 @@
             <h1>EGO ADHUC <span>VIVIT</span></h1>
             <div class="hero-content__p">
               This creative 3D website with a ‘lens effect’ for my frend
-              P.Nicolenko
+              P.Nicolenko <br>
+							для просмотра сайта нажать START TABACO для возврата вертикальную
+              Ego Adhuc Vivit <br>
+							включайте музыку в левом верхнем углу и милости прошу
+
             </div>
             <!-- <button class="button-start">Start Learning</button> -->
             <button class="button-start" onclick="location.href='/index1.html'">
               Start Tabaco
             </button>
+            
           </div>
         </div>
         <div class="layers__item layer-4">
@@ -48,9 +62,6 @@
         ></div>
       </div>
     </section>
-    <audio id="bg-music" controls autoplay loop hidden>
-      <source src="music.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+   
   </body>
 </html>

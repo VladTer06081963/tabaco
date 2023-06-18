@@ -13,12 +13,29 @@
 
     <link rel="stylesheet" href="css/main1.css" />
     <script src="js/app1.js" defer></script>
+
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(document).pjax('a', '#pjax-container');
+});
+</script>
+
+
   </head>
-  <body>
-    <audio id="bg-music" controls autoplay loop hidden>
-      <source src="music.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+  
+
+	<audio id="bg-music" controls autoplay loop hidden>
+    <source src="/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
+
+    
+
 
     <div class="wrapper">
       <div class="content">
