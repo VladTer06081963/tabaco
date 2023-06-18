@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*    background-color: inherit;*/
+}
+body {
+  background-image: url('../img/bg.jpg');
+  background-size: 50px;
+
+  color: #fafafa;
+}
+
+.parallax_1 {
+  background: url('../img/work/33.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* 
+.content_1 {
+  background-color: inherit;
+} */
+
+.parallax_2 {
+  background: url(../img/work/44.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /*    background-color: currentColor;*/
+}
