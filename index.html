@@ -4,70 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Tabaco</title>
-
-    <script src="libs/gsap/gsap.min.js" defer></script>
-    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
-    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
-
+    <title>Document</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/app.js" defer></script>
+    <script src="libs/rain.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="content">
-        <header class="hero-section">
-          <img data-speed=".6" class="hero" src="img/hero.png" alt="Alt" />
-          <h1 class="hero2"><a href="index2.html">Ego adhuc vivit</a></h1>
-          <div class="container">
-            <div data-speed=".75" class="main-header">
-              <h1 class="main-title">Табак и мир</h1>
+    <div class="logo" style="background-image: url(img/logo.svg)"></div>
+
+    <section class="layers">
+      <div class="layers__container">
+        <div
+          class="layers__item layer-1"
+          style="background-image: url(img/layer-1.jpg)"
+        ></div>
+        <div
+          class="layers__item layer-2"
+          style="background-image: url(img/layer-2.png)"
+        ></div>
+        <div class="layers__item layer-3">
+          <div class="hero-content">
+            <h1>EGO ADHUC <span>VIVIT</span></h1>
+            <div class="hero-content__p">
+              This creative 3D website with a ‘lens effect’ for my frend
+              P.Nicolenko
             </div>
-          </div>
-        </header>
-
-        <div class="portfolio">
-          <div class="container">
-            <main class="gallery">
-              <div data-speed=".9" class="gallery__left">
-                <img class="gallery__item" src="img/work/1.jpg" alt="Alt" />
-                <img class="gallery__item" src="img/work/2.jpg" alt="Alt" />
-
-                <div class="text-block gallery__item">
-                  <h2 class="text-block__h">
-                    Хорошо, когда есть сигареты. Иногда это даже лучше, чем
-                    друзья. Сигареты не сбивают с толку. Они молчаливые друзья.
-                  </h2>
-                  <p class="text-block__p">
-                    Парни не плачут, они выходят на лестницу покурить.
-                  </p>
-                </div>
-
-                <img class="gallery__item" src="img/work/6.jpg" alt="Alt" />
-              </div>
-
-              <div data-speed="1.1" class="gallery__right">
-                <div class="text-block gallery__item">
-                  <h2 class="text-block__h live">
-                    Моё любимое увлечение — курить. Постоянное хобби — пытаться
-                    бросить курить.
-                  </h2>
-                  <p class="text-block__p">
-                    Счастье? Это роскошный ужин, сигара и любимая девушка-или
-                    нелюбимая, в зависимости от того, каким количеством счастья
-                    вы можете в этот момент распорядиться.
-                  </p>
-                </div>
-
-                <img class="gallery__item" src="img/work/4.jpg" alt="Alt" />
-                <img class="gallery__item" src="img/work/5.jpg" alt="Alt" />
-                <img class="gallery__item" src="img/work/3.jpg" alt="Alt" />
-              </div>
-            </main>
+            <!-- <button class="button-start">Start Learning</button> -->
+            <button class="button-start" onclick="location.href='/index1.html'">
+              Start Tabaco
+            </button>
           </div>
         </div>
+        <div class="layers__item layer-4">
+          <canvas class="rain"></canvas>
+        </div>
+        <div
+          class="layers__item layer-5"
+          style="background-image: url(img/layer-5.png)"
+        ></div>
+        <div
+          class="layers__item layer-6"
+          style="background-image: url(img/layer-6.png)"
+        ></div>
       </div>
-    </div>
+    </section>
   </body>
 </html>

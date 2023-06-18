@@ -1,122 +1,108 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 :root {
-  --index: calc(1vw + 1vh);
-  --color-header: #f4efec;
-  --color-text: #cdc6c3;
-  --gallery-gap: calc(var(--index) * 7.5);
+	--index: calc(1vw + 1vh);
+	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
 }
 @font-face {
-  font-family: raleway-c;
-  src: url(../fonts/raleway-regular.woff2);
+	font-family: kamerik-3d;
+	src: url(../fonts/kamerik205-heavy.woff2);
+	font-weight: 900;
 }
 @font-face {
-  font-family: outfit-c;
-  src: url(../fonts/outfit-regular.woff2);
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: outfit-c;
-}
-/* will-change */
-.content,
-.hero,
-/* .hero2, */
-.main-header,
-.gallery > * {
-  will-change: transform;
+	font-family: merriweather-italic-3d;
+	src: url(../fonts/merriweather-regular-italic.woff2);
 }
 body {
-  background-image: url(../img/bg.jpg);
-  background-size: 50px;
-  color: #fafafa;
-  font-family: raleway-c;
-  overflow-x: hidden;
+	background-color: #000;
+	color: #fff;
+	font-family: kamerik-3d;
 }
-
-.hero2 {
-  width: calc(var(--index) * 36);
-  position: absolute;
-  left: 37vw;
-  top: 22vh;
-  z-index: 1;
-
-  --color-text: rgb(237, 245, 245);
-
-  text-align: right;
-  writing-mode: vertical-lr;
-  padding: 70 vh 0 30 vh 0;
+.logo {
+	--logo-size: calc(var(--index) * 7.8);
+	width: var(--logo-size);
+	height: var(--logo-size);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: calc(51% - calc(var(--logo-size) / 2));
+	top: calc(var(--index) * 2.8);
+	z-index: 1;
 }
-
-.hero {
-  width: calc(var(--index) * 36);
-  position: absolute;
-  left: 37vw;
-  top: 22vh;
-  z-index: -1;
+.layers {
+	perspective: 1000px;
+	overflow: hidden;
 }
-
-.main-header {
-  height: 100vh;
+.layers__container {
+	height: 100vh;
+	min-height: 500px;
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	will-change: transform;
+	transition: transform var(--transition);
 }
-.container {
-  padding: 0 7vw;
+.layers__item {
+	position: absolute;
+	inset: -5vw;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.main-title {
-  font-size: calc(var(--index) * 8);
-  position: absolute;
-  width: min-content;
-  bottom: 12vh;
-  line-height: 0.9;
+.layer-1 {
+	transform: translateZ(-55px) scale(1.06);
 }
-.gallery {
-  display: flex;
-  padding: calc(var(--index) * 8) 0;
+.layer-2 {
+	transform: translateZ(80px) scale(.88);
 }
-.gallery > * {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.layer-3 {
+	transform: translateZ(180px) scale(.8);
 }
-.gallery__item {
-  max-width: calc(var(--index) * 21);
-  margin-bottom: var(--gallery-gap);
-  max-height: 180vh;
-  border-radius: 8px;
+.layer-4 {
+	transform: translateZ(190px) scale(.9);
 }
-.gallery__left {
-  margin-top: calc(var(--gallery-gap) * 1.75);
+.layer-5 {
+	transform: translateZ(300px) scale(.9);
 }
-.gallery__right .gallery__item {
-  margin: 0;
-  margin-top: var(--gallery-gap);
+.layer-6 {
+	transform: translateZ(380px);
 }
-.text-block {
-  color: var(--color-text);
-  position: relative;
+.hero-content {
+	font-size: calc(var(--index) * 2.9);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: calc(var(--index) * -.15);
+	line-height: 1.35em;
+	margin-top: calc(var(--index) * 5.5);
 }
-.text-block__h {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  color: var(--color-header);
-  margin-bottom: 1.5rem;
+.hero-content span {
+	display: block;
 }
-
-.text-block__p {
-  line-height: 1.75;
+.hero-content__p {
+	text-transform: none;
+	font-family: merriweather-italic-3d;
+	letter-spacing: normal;
+	font-size: calc(var(--index) * .73);
+	line-height: 3;
 }
-
-.text-block__p {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  color: var(--color-header);
-  margin-bottom: 1.5rem;
+.button-start {
+	font-family: Arial;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: calc(var(--index) * .71);
+	letter-spacing: -.02vw;
+	padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
+	background-color: transparent;
+	color: #fff;
+	border-radius: 10em;
+	border: rgb(255 255 255 / .4) 3px solid;
+	outline: none;
+	cursor: pointer;
+	margin-top: calc(var(--index) * 2.5);
+}
+.layer-4, .layer-5, .layer-6 {
+	pointer-events: none;
 }
